@@ -1,0 +1,34 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Add Doctor Details </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Name </label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] = "doctor.name" name = "name">
+        </div>
+        <div class="form-group">
+            <label> Age </label>
+            <input type="text" class ="form-control" id = "age"
+                [(ngModel)] = "doctor.age" name = "age">
+        </div>
+        <div class="form-group">
+             <input type="radio" value="Male" id="gender"  
+             name="gender" [(ngModel)]="doctor.gender" required #genderControl="ngModel"> Male
+            <input type="radio" value="Female" id="gender" 
+            name="gender" [(ngModel)]="doctor.gender" required> Female
+             </div>
+        <div class="form-group">
+            <label> Specialist Field </label>
+            <input type="text" class ="form-control" id = "specialistfields"
+                [(ngModel)] = "doctor.specialistfields" name = "specialistfields">
+        </div>
+        <div class="form-group">
+            <label> Patient Attended </label>
+            <input type="text" class ="form-control" id = "patientattended"
+                [(ngModel)] = "doctor.patientattended" name = "patientattended">
+        </div>
+       
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    </form>
+        </div>

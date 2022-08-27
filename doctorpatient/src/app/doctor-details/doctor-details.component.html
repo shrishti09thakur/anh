@@ -1,0 +1,19 @@
+<div class="container" style=margin:50px;>
+    <div class="card border-primar">
+        <div class="card-header">
+            <form>
+                <div class="form-group">
+                    <label>Doctor List</label>
+                    <select class="form-control"#doctorid>
+                        <option>Select Doctor</option>
+                        <option *ngFor="let doctors of doctorList"value="{{doctors.id}}" >{{doctors.name}}</option>
+
+
+                    </select>
+                    <button (click) = "doctorDetails(doctorid.value)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
